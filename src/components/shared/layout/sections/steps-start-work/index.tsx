@@ -13,7 +13,7 @@ export default function StepsStartWork() {
   const { windowSize } = useWindowSize();
 
   return (
-    <section className="flex-center flex-col p-5 gap-y-4">
+    <section className="flex-center flex-col p-5 gap-y-4 ئ">
       <div className="flex-center flex-col gap-y-4">
         <h1 className="text-5xl font-medium text-center">
           The Fastest onboarding ever

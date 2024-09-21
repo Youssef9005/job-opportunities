@@ -34,7 +34,7 @@ export default function FeatureCardSwiper() {
         <SwiperSlide>
           <FeatureCard
             title="Totally Remote"
-            description="At Cotopia, we are committed to providing a fully remote and flexible work environment, allowing teams from around the world to collaborate and work efficiently without being tied to a specific location. Whether you’re working from home, a café, or even while traveling, we ensure seamless communication and effective coordination, boosting productivity and giving you the freedom to achieve the perfect work-life balance."
+            description="Remote work involves performing job duties from home or any location outside the traditional office. You can choose your working hours, with a minimum of 50 and a maximum of 20 hours pre month, while using the current version of Cotopia as your workplace"
             className="md:col-span-1 flex-center"
           />
         </SwiperSlide>
