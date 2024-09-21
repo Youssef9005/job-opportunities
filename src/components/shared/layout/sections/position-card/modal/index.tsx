@@ -1,4 +1,4 @@
-import { forwardRef, useImperativeHandle, useRef } from "react";
+import { forwardRef, useImperativeHandle, useRef, useEffect, useState } from "react";
 import ModalHeader from "./components/header";
 import JobResponsibilities from "./components/job-responsibilities";
 import Requirements from "./components/requirements";
@@ -34,11 +34,14 @@ const JobModal = forwardRef<JobModalHandle, Props>(function JobModal(
     props.onClose();
   }
 
-  const DialogModalContainer = document.getElementById("dialog-modal");
+  const [modalContainer, setModalContainer] = useState<HTMLElement | null>(null);
 
-  if (!DialogModalContainer) {
-    console.error("Target container for modal is not found.");
-    return null;
+  useEffect(() => {
+    setModalContainer(document.getElementById("dialog-modal"));
+  }, []);
+
+  if (!modalContainer) {
+    return null; 
   }
 
   return createPortal(
@@ -62,7 +65,7 @@ const JobModal = forwardRef<JobModalHandle, Props>(function JobModal(
         </button>
       </div>
     </dialog>,
-    DialogModalContainer
+    modalContainer
   );
 });
 
